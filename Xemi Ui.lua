@@ -627,28 +627,28 @@ local function resolveid(image, flag)
 								end
 							end)
 							codename = string.sub(codename, 1, 24) .. tostring(fixes)
-							local fold = isfolder("./Pepsi Lib")
+							local fold = isfolder("./Xemi X Premium Script")
 							if fold then
 							else
-								makefolder("./Pepsi Lib")
+								makefolder("./Xemi X Premium Script")
 							end
-							fold = isfolder("./Pepsi Lib/Themes")
+							fold = isfolder("./Xemi X Premium Script/Themes")
 							if fold then
 							else
-								makefolder("./Pepsi Lib/Themes")
+								makefolder("./Xemi X Premium Script/Themes")
 							end
-							fold = isfolder("./Pepsi Lib/Themes/SynapseAssetsCache")
+							fold = isfolder("./Xemi X Premium Script/Themes/SynapseAssetsCache")
 							if fold then
 							else
-								makefolder("./Pepsi Lib Themes/SynapseAssetsCache")
+								makefolder("./Xemi X Premium Script Themes/SynapseAssetsCache")
 							end
-							if not fold or not isfile("./Pepsi Lib/Themes/SynapseAssetsCache/" .. codename .. ".dat") then
+							if not fold or not isfile("./Xemi X Premium Script/Themes/SynapseAssetsCache/" .. codename .. ".dat") then
 								local res = game:HttpGet(string.sub(image, 15))
 								if res ~= nil then
-									writefile("./Pepsi Lib/Themes/SynapseAssetsCache/" .. codename .. ".dat", res)
+									writefile("./Xemi X Premium Script/Themes/SynapseAssetsCache/" .. codename .. ".dat", res)
 								end
 							end
-							return getsynasset(readfile("./Pepsi Lib/Themes/SynapseAssetsCache/" .. codename .. ".dat"))
+							return getsynasset(readfile("./Xemi X Premium Script/Themes/SynapseAssetsCache/" .. codename .. ".dat"))
 						end)
 						if x and e ~= nil then
 							return e
@@ -1994,7 +1994,7 @@ function library:CreateWindow(options, ...)
 	local windowName = options.Name or "Unnamed Window"
 	options.Name = windowName
 	if windowName and #windowName > 0 and library.WorkspaceName == "Xemi X Premium Script" then
-		library.WorkspaceName = convertfilename(windowName, "Pepsi Lib")
+		library.WorkspaceName = convertfilename(windowName, "Xemi X Premium Script")
 	end
 	local pepsiLibrary = Instance_new("ScreenGui")
 	library.MainScreenGui, MainScreenGui = pepsiLibrary, pepsiLibrary
@@ -5067,14 +5067,14 @@ function library:CreateWindow(options, ...)
 					local realDropdownHolder = Instance_new("ScrollingFrame")
 					local realDropdownHolderList = Instance_new("UIListLayout")
 					local dropdownEnabled = false
-					if not isfolder("./Pepsi Lib") then
-						makefolder("./Pepsi Lib")
+					if not isfolder("./Xemi X Premium Script") then
+						makefolder("./Xemi X Premium Script")
 					end
-					local common_string = "./Pepsi Lib/" .. tostring(custom_workspace or library.WorkspaceName)
+					local common_string = "./Xemi X Premium Script/" .. tostring(custom_workspace or library.WorkspaceName)
 					local function resolvelist(nofold)
 						if custom_workspace ~= options.Workspace then
 							custom_workspace = options.Workspace
-							common_string = "./Pepsi Lib/" .. tostring(custom_workspace or library.WorkspaceName)
+							common_string = "./Xemi X Premium Script/" .. tostring(custom_workspace or library.WorkspaceName)
 						end
 						if not isfolder or not makefolder or not listfiles then
 							return {}
@@ -7208,7 +7208,7 @@ function library:CreateWindow(options, ...)
 		}}, {"AddPersistence", "__Designer.Persistence.ThemeFile", filessection, {
 			Name = "Theme Profile",
 			Flag = "__Designer.Files.ThemeFile",
-			Workspace = "Pepsi Lib Themes",
+			Workspace = "Xemi X Premium Script Themes",
 			Flags = flags,
 			Suffix = "Theme",
 			Desginer = true
