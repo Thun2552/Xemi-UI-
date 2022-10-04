@@ -477,7 +477,7 @@ local library = {
 		easingDirection = Enum.EasingDirection.Out
 	},
 	colors = {
-		main = Color3.fromRGB(255, 255, 51),
+		main = Color3.fromRGB(30, 144, 255),
 		background = Color3.fromRGB(40, 40, 40),
 		outerBorder = Color3.fromRGB(15, 15, 15),
 		innerBorder = Color3.fromRGB(73, 63, 73),
@@ -1993,7 +1993,7 @@ function library:CreateWindow(options, ...)
 	local windowoptions = options
 	local windowName = options.Name or "Unnamed Window"
 	options.Name = windowName
-	if windowName and #windowName > 0 and library.WorkspaceName == "Pepsi Lib" then
+	if windowName and #windowName > 0 and library.WorkspaceName == "Xemi X Premium Script" then
 		library.WorkspaceName = convertfilename(windowName, "Pepsi Lib")
 	end
 	local pepsiLibrary = Instance_new("ScreenGui")
