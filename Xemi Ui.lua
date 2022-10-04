@@ -462,7 +462,7 @@ Library v0.35 [
 ]]
 local library = {
 	Version = "0.35",
-	WorkspaceName = "Pepsi Lib",
+	WorkspaceName = "Xemi X Premium Script",
 	flags = {},
 	signals = {},
 	objects = {},
@@ -471,13 +471,13 @@ local library = {
 	subs = {},
 	colored = {},
 	configuration = {
-		hideKeybind = Enum.KeyCode.RightShift,
+		hideKeybind = Enum.KeyCode.RightControl,
 		smoothDragging = false,
 		easingStyle = Enum.EasingStyle.Quart,
 		easingDirection = Enum.EasingDirection.Out
 	},
 	colors = {
-		main = Color3.fromRGB(255, 39, 39),
+		main = Color3.fromRGB(255, 255, 51),
 		background = Color3.fromRGB(40, 40, 40),
 		outerBorder = Color3.fromRGB(15, 15, 15),
 		innerBorder = Color3.fromRGB(73, 63, 73),
@@ -7302,7 +7302,7 @@ function library:CreateWindow(options, ...)
 		end
 		if options.Credit ~= false then
 			daaata[1 + #daaata] = {"AddLabel", "__Designer.Label.Creator", detailssection, {
-				Text = "Library by Pepsi#5229 "
+				Text = "Script by imville#3300 "
 			}}
 		elseif "Gee, thanks for your support." then
 		end
